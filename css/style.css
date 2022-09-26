@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #1e2227;
+    color: #fff;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*Para haver espaço entre os itens*/
+    padding: 30px 8%;
+    position: fixed; /*Para mesmo que a mude a barra de rolagem esses itens sempre ficarem fixos na parte de cima da pagina*/
+    top: 0;
+    width: 100%;
+    background: #1e2227;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+nav:hover{
+    filter: drop-shadow(0 0 15px rgb(0, 0, 0));
+}
+
+
+.logo{
+    width: 120px; /*Tamanho da logo*/
+    cursor: pointer; /*Tipo do desenho do cursor*/
+}
+
+.navIcons img{
+    width: 25px;
+    margin-left: 30px; /*Distanceamento de uma imagem para outra; entre as imagens que estão dentro dessa class, no caso a de menu, busca, etc*/
+    cursor: pointer;
+}
+
+.row{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    /*background-color: cadetblue; Aqui estaria definindo tipo um background para a página toda, porém não usaremos ele*/
+}
+
+.col1, .col2{
+    flex-basis: 50%; /*Significa que a largura de referencia será 50% do elemento pai. Usará meio espaço.*/
+    height: 100%;
+    display: flex; /*Solto*/
+    justify-content: center;
+    flex-direction: column; /*O conteudo desse div será centrado verticalmente*/
+}
+
+.col1{
+    padding-left: 8%; /*Distanceamento do lado esquerdo de 8%*/
+}
+
+.col1 h1{
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 82px; /*Espaçamento de altura entre as linhas*/
+    margin-bottom: 5px; /*Tamanho da margem de baixo do título*/
+}
+
+.col1 h2{
+    font-size: 40px;
+    margin-top: 60px; /*Margem da parte de cima do h2*/
+    font-weight: 600; /*Grossura da fonte*/
+}
+
+button{
+    display: inline-block; /*Bloco de exibição em linha*/
+    width: fit-content; /*Serve para que a largura seja ajustada com o conteúdo*/
+    padding: 18px 50px;
+    background: #178fd6;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background: #034488;
+    transform: translateY(-5px); /*O botão da uma subidinha no eixo y como animação com passa o mouse por cima*/
+    box-shadow: 0 0 10px #034388c6;
+
+}
+.col2{
+    background: #178fd6;
+    padding-top: 8%; /*Distanceamento do topo*/
+    position: relative;
+}
+.col2 h2{
+    position: absolute;
+    left: 7%;
+    top:22%;
+    font-size: 110px;
+    opacity: 0.3;
+    filter: drop-shadow(0 0 15px #034388c6);
+}
+.featureImg{ /*Preparação para colocar uma imagem*/
+    width: 100%;
+    text-align: center;
+}
+.featureImg img{ /*Configuração da imagem grandona que está colocada a direita*/
+    margin-top: 80px;
+    margin-left: 30px;
+    width: 75%;
+    transform: rotate(-2deg);
+}
+
+.smallImgRow{ 
+    display: flex;
+    width: 80%; /*Cria uma largura total para as pequenas*/
+    margin: 70px auto 0; /*Referente as margens. O primeiro valor é a margem superior*/
+    align-items:center; /*Alinhamento dos itens dessa class*/
+    justify-content: space-around; /*Cria um 
+    espaçamento*/
+    /*flex-direction: column; Utilizando isso nós colocariamos todos os itens pequenos em coluna vertical. Como está apenas comentado, os itens permanecem em horizontal*/
+}
+
+.smallImg{ /*Referente as imagens pequenas*/
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    background: #ccc;
+}
+
+.smallImg img{
+    width: 100px; /*Tamanho dos tênis menores*/
+    transform: translate(-40px, 20px) rotate(30deg); /*Rotação dos tênis menores*/
+    transition: 0.3s;
+}
+
+.smallImgRow img:hover{
+    transform: translatex(-10px);
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.563));
+}
+
+.smallImg:nth-child(1){
+    background: #0c314c;
+}
+
+.smallImg:nth-child(2){
+    background: #0c5868;
+}
+
+.smallImg:nth-child(3){
+    background: #2284b1;
+}
+
+.smallImg:nth-child(1){
+    background: #2bb7d0;
+}
